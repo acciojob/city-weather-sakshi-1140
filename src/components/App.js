@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./../styles/App.css";
 import axios from "axios";
 import "regenerator-runtime/runtime";
-
 const App = () => {
   const [city, setCity] = useState("");
   const [input, setInput] = useState("");
@@ -28,7 +27,7 @@ const App = () => {
   useEffect(() => {
     fetchApi();
     console.log("called fetchAPI");
-    return () => console.log("cleanup");
+   // return () => console.log("cleanup");
   }, [city]);
 
   const handleChange = (e) => {
@@ -37,6 +36,7 @@ const App = () => {
 
   const display = () => {
     setCity(input);
+    setInput("");
   };
 
   return (
