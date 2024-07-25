@@ -4,7 +4,7 @@ import axios from "axios";
 import "regenerator-runtime/runtime";
 
 const App = () => {
-  const [city, setCity] = useState("mumbai");
+  const [city, setCity] = useState("");
   const [input, setInput] = useState("");
   const [weather, setWeather] = useState({});
   const [error, setError] = useState("");
